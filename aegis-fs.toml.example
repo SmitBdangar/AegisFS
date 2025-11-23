@@ -1,0 +1,18 @@
+[s3]
+bucket = "my-encrypted-bucket"
+region = "us-east-1"
+# Optional: Custom endpoint for S3-compatible services (MinIO, DigitalOcean Spaces, etc.)
+# endpoint = "https://s3.amazonaws.com"
+# Optional: Credentials (if not using AWS credential chain)
+# access_key_id = "your-access-key"
+# secret_access_key = "your-secret-key"
+prefix = ""  # Optional prefix for all objects
+
+[encryption]
+key_file = "aegis-fs.key"
+algorithm = "aes256-gcm"  # Currently only aes256-gcm is supported
+
+[cache]
+directory = "/tmp/aegis-fs-cache"
+max_size_mb = 1024
+

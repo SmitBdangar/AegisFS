@@ -1,0 +1,33 @@
+[package]
+name = "aegis-fs"
+version = "0.1.0"
+edition = "2021"
+authors = ["AegisFS Contributors"]
+description = "Transparent encryption proxy filesystem for S3 and remote filesystems"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/yourusername/AegisFS"
+
+[dependencies]
+fuser = "0.14"
+tokio = { version = "1", features = ["full"] }
+aws-sdk-s3 = "1"
+aws-config = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+anyhow = "1"
+thiserror = "1"
+aes-gcm = "0.10"
+rand = "0.8"
+hex = "0.4"
+clap = { version = "4", features = ["derive"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+async-trait = "0.1"
+bytes = "1"
+sha2 = "0.10"
+pbkdf2 = "0.12"
+
+[dev-dependencies]
+tempfile = "3"
+
